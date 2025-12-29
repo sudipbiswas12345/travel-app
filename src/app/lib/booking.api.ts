@@ -21,7 +21,7 @@ export async function createBooking(data: {
     tableId: BOOKINGS_COLLECTION_ID,
     rowId: ID.unique(),
 
-     permissions: null,
+     permissions:  undefined,
 
     data: {
       userId: user.$id,
