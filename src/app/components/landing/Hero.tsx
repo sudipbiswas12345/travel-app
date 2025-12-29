@@ -1,4 +1,5 @@
 "use client";
+declare module 'swiper' {};
 import { Container, Button } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
