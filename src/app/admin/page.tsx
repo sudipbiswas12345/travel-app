@@ -104,8 +104,8 @@ export default function AdminDashboard() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
       <StatCard
-        title="Total Destinations"
-        value={stats.destinations.toString()}
+        title="Total Destinations" 
+        value={stats.destinations.toLocalString()}
         icon={MapPin}
         change="+12%"
         color="from-emerald-500 to-emerald-600"
@@ -113,7 +113,7 @@ export default function AdminDashboard() {
       />
       <StatCard
         title="Total Bookings"
-        value={stats.bookings}
+        value={stats.bookings.toLocalString()}
         icon={Users}
         change="+28%"
         color="from-blue-500 to-blue-600"
