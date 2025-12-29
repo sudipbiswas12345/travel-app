@@ -20,17 +20,26 @@ export default function AdminBlogsPage() {
   const [deletingId, setDeletingId] = useState<string | null>(null);
 
   
-  const fetchBlogs = async () => {
-    try {
-      setLoading(true);
-      const allBlogs = await getBlogs();
-      setBlogs(allBlogs);
-    } catch (error) {
-      console.error("Failed to fetch blogs:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
+ const fetchBlogs = async () => {
+  try {
+    setLoading(true);
+    const allBlogsRaw = await getBlogs();
+    const allBlogs: Blog[] = allBlogsRaw.map((doc: any) => ({
+      $id: doc.$id,
+      title: doc.title,
+      image: doc.image,
+      author: doc.author,
+      date: doc.date,
+      excerpt: doc.excerpt || '',
+      content: doc.content,
+    }));
+    setBlogs(allBlogs);
+  } catch (error) {
+    console.error("Failed to fetch blogs:", error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   useEffect(() => {
     fetchBlogs();
