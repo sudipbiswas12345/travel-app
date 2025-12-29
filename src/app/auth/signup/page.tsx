@@ -72,7 +72,7 @@ const Signup = () => {
         priority
       />
 
-      <div className="backdrop-blur-md bg-white/20 border border-white/30 shadow-2xl p-8 rounded-2xl w-full max-w-md mx-4 relative z-10">
+      <div className="backdrop-blur-md bg-white/20 border border-white/30 shadow-2xl p-8 rounded-2xl w-full max-w-md mx-4my-4 relative z-10">
         <h2 className="text-3xl font-bold text-center text-white">Sign up</h2>
 
         <form className="space-y-6" onSubmit={handleSubmit}>
