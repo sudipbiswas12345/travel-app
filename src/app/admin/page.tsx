@@ -77,8 +77,8 @@ export default function AdminDashboard() {
       console.error("Failed to fetch stats:", error);
       setStats({
         destinations: 128,
-        bookings: 1,247,
-        revenue: "₹4,20,000",
+        bookings: 1247,
+        revenue: "4200000",
         conversionRate: 3.45,
       });
     } finally {
