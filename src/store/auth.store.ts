@@ -1,4 +1,4 @@
-import create from "zustand";
+import {create} from "zustand";
 import { account } from "@/appwrite.config";
 import Cookies from "js-cookie";
 
