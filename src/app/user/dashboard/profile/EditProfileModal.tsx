@@ -45,7 +45,7 @@ export default function EditProfileModal({
     try {
       const updateData = { ...form };
       if (imageFileId) {
-        updateData.profileImage = imageFileId;
+        (form as any).profileImage = imageFileId;
       }
       
       const res = await updateMyProfile(profile.$id, updateData);
