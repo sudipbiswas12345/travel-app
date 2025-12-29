@@ -2,10 +2,13 @@
 
 import { Container } from "@mui/material";
 import { FaQuoteLeft } from "react-icons/fa";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import Slider from "react-slick";
 import { cn } from "@/app/lib/cn";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 
 const testimonials = [
   { text: "Best travel experience ever! Booking was smooth and easy.", author: "Sarah M." },
