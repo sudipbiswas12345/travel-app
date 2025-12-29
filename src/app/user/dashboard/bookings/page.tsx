@@ -82,7 +82,7 @@ export default function MyBookingsPage() {
                   deleteMutation.mutate(b.$id);
                 }
               }}
-              disabled={deleteMutation.isLoading}
+              disabled={deleteMutation.isPending}
               className={`flex items-center gap-2 text-sm px-3 py-2 rounded-lg ${
                 deleteMutation.isLoading
                   ? "text-gray-400"
@@ -90,7 +90,7 @@ export default function MyBookingsPage() {
               }`}
             >
               <Trash2 size={16} />
-              {deleteMutation.isLoading ? "Deleting..." : "Delete"}
+              {deleteMutation.isPending ? "Deleting..." : "Delete"}
             </button>
           </div>
         );
