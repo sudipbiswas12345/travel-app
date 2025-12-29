@@ -1,5 +1,7 @@
-import {create} from "zustand";
+import { create } from "zustand";
 import { account } from "@/appwrite.config";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import Cookies from "js-cookie";
 
 type User = { $id: string; email?: string; name?: string; [k:string]: any } | null;
