@@ -11,14 +11,14 @@ export default function CreateBlogPage() {
     e.preventDefault();
     setLoading(true);
 
-    const form = e.currentTarget;
+  const form = e.currentTarget;
 
-    const title = form.title.value.trim();
-    const author = form.author.value.trim();
-    const date = form.date.value;
-    // const shortDesc = form.shortDesc.value.trim();
-    const content = form.content.value.trim();
-    const imageFile = form.image.files?.[0];
+const title = (form.elements.namedItem('title') as HTMLInputElement)?.value?.trim() ?? '';
+const author = (form.elements.namedItem('author') as HTMLInputElement)?.value?.trim() ?? '';
+const date = (form.elements.namedItem('date') as HTMLInputElement)?.value ?? '';
+const content = (form.elements.namedItem('content') as HTMLTextAreaElement)?.value?.trim() ?? '';
+const imageFile = (form.elements.namedItem('image') as HTMLInputElement)?.files?.[0] ?? null;
+
 
    
     if (!title || !author || !date || !content || !imageFile) {
