@@ -18,17 +18,31 @@ const Login = () => {
   const { login, user, loading: authLoading } = useAuth();
   const router = useRouter();
 
-  useEffect(() => {
-    if (!authLoading && user) {
-      const role = user.role?.toLowerCase();
+  // useEffect(() => {
+  //   if (!authLoading && user) {
+  //     const role = user.role?.toLowerCase();
 
-      if (role === "admin") {
-        router.push("/admin");
-      } else {
-        router.push("/destinations");
-      }
+  //     if (role === "admin") {
+  //       router.push("/admin");
+  //     } else {
+  //       router.push("/destinations");
+  //     }
+  //   }
+  // }, [user, authLoading, router]);
+
+
+  useEffect(() => {
+  if (!authLoading && user) {
+    console.log("User role:", user.role);
+    const role = user.role?.toLowerCase();
+    if (role === "admin" || role === "administrator") {
+      router.push("/admin/dashboard");
+    } else {
+      router.push("/user/dashboard");
     }
-  }, [user, authLoading, router]);
+  }
+}, [user, authLoading, router]);
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
