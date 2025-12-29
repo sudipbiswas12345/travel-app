@@ -70,7 +70,7 @@ export default function AdminDashboard() {
        destinations: 128,
        bookings: 1247,
        revenue: "420000",
-       conversionRate: 3.45
+       conversionRate: "3.45"
      });
       
     } catch (error) {
@@ -79,7 +79,7 @@ export default function AdminDashboard() {
         destinations: 128,
         bookings: 1247,
         revenue: "4200000",
-        conversionRate: 3.45,
+        conversionRate: "3.45"
       });
     } finally {
       setLoading(false);
