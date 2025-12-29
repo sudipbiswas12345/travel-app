@@ -1,11 +1,12 @@
 "use client";
-declare module 'swiper' {};
+
 import { Container, Button } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper";
+import type { Autoplay, Pagination } from 'swiper';  
 import { useRouter } from "next/navigation";
 
 import "swiper/css";
+
 import "swiper/css/pagination";
 
 export default function Hero() {
