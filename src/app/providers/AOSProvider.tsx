@@ -1,8 +1,9 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import AOS from "aos"
-import "aos/dist/aos.css"
+"use client";
+import { useEffect, useState } from "react";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function AOSProvider({
   children,
