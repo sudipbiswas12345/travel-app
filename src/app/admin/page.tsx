@@ -66,12 +66,13 @@ export default function AdminDashboard() {
           ? ((totalBookings / totalDestinations) * 100).toFixed(2) + "%"
           : "0%";
 
-      setStats({
-        destinations: totalDestinations,
-        bookings: totalBookings,
-        revenue: formattedRevenue,
-        conversionRate,
-      });
+     setStats({
+       destinations: 128,
+       bookings: 1247,
+       revenue: "420000",
+       conversionRate: 3.45
+     });
+      
     } catch (error) {
       console.error("Failed to fetch stats:", error);
       setStats({
