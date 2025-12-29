@@ -47,7 +47,7 @@ export default function BookingPage() {
         }
         className="mt-6 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition"
       >
-        {bookingMutation.isLoading ? "Booking..." : "Confirm Booking"}
+        {bookingMutation.isPending ? "Booking..." : "Confirm Booking"}
       </button>
     </div>
   );
