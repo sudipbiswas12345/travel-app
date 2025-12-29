@@ -84,7 +84,7 @@ export default function MyBookingsPage() {
               }}
               disabled={deleteMutation.isPending}
               className={`flex items-center gap-2 text-sm px-3 py-2 rounded-lg ${
-                deleteMutation.isLoading
+                deleteMutation.isPending
                   ? "text-gray-400"
                   : "text-red-600 hover:bg-red-50"
               }`}
