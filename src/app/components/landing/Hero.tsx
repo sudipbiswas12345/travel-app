@@ -1,7 +1,7 @@
 "use client";
 import { Container, Button } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper/modules";
 import { useRouter } from "next/navigation";
 
 import "swiper/css";
