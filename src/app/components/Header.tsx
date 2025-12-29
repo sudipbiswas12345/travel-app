@@ -282,7 +282,7 @@ export default function Navbar() {
               <button
                 onClick={() => {
                   setOpen(false);
-                  router.push("/login");
+                  router.push("/auth/login");
                 }}
                 className="w-full px-4 py-3 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white rounded-xl shadow-lg"
               >
@@ -291,7 +291,7 @@ export default function Navbar() {
               <button
                 onClick={() => {
                   setOpen(false);
-                  router.push("/signup");
+                  router.push("/auth/signup");
                 }}
                 className="w-full px-4 py-3 bg-white border-2 border-emerald-600 text-emerald-600 rounded-xl"
               >
