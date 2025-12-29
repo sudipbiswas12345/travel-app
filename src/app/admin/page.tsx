@@ -68,7 +68,7 @@ export default function AdminDashboard() {
 
       setStats({
         destinations: totalDestinations,
-        bookings: totalBookings.toLocaleString(),
+        bookings: totalBookings,
         revenue: formattedRevenue,
         conversionRate,
       });
