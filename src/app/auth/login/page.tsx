@@ -35,15 +35,14 @@ const Login = () => {
   if (!authLoading && user) {
     console.log("User role:", user.role);
     const role = user.role?.toLowerCase();
-     if (role === "admin" || role === "administrator") { 
+    if (role === "admin" || role === "administrator") { 
       router.push("/admin"); 
-    } else if (role === "user") {
-      router.push("/user/dashboard"); 
     } else {
-      router.push("/destinations");
+      router.push("/destinations"); 
     }
   }
 }, [user, authLoading, router]);
+
 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -60,7 +59,7 @@ const Login = () => {
       await login(formData.email, formData.password);
       // ✅ ADD THESE 2 LINES HERE (after login success)
     document.cookie = `token=session_${Date.now()}; path=/; max-age=86400`;
-    document.cookie = `role=user; path=/; max-age=86400`; // or "admin"
+   document.cookie = `role=${user?.role || 'user'}; path=/; max-age=86400`;
     
     } catch (err: any) {
       setError(err?.message || "Login failed. Please check your credentials.");
