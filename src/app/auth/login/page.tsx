@@ -35,10 +35,12 @@ const Login = () => {
   if (!authLoading && user) {
     console.log("User role:", user.role);
     const role = user.role?.toLowerCase();
-    if (role === "admin" || role === "administrator") {
-      router.push("/admin/dashboard");
+     if (role === "admin" || role === "administrator") { 
+      router.push("/admin"); 
+    } else if (role === "user") {
+      router.push("/user/dashboard"); 
     } else {
-      router.push("/user/dashboard");
+      router.push("/destinations");
     }
   }
 }, [user, authLoading, router]);
