@@ -10,7 +10,7 @@ const destinations = [
   { city: "Bali", image: "/images/bali.webp" },
   { city: "Dubai", image: "/images/dubai.webp" },
   { city: "Rome", image: "/images/rome1.jpg" },
-  { city: "India", image: "/images/Kerala.webp" },
+  { city: "India", image: "/images/india.jpg" },
   { city: "Thailand", image: "/images/thailand.jpg" },
   { city: "Egypt", image: "/images/egypt4.jpg" },
   { city: "London", image: "/images/london.jpg" },
